@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+
+    <TableLayout
+        android:id="@+id/TableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="false"
+        android:gravity="top">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#072BF6"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/titulo"
+                    android:textColor="#FAF8F8"
+                    android:textSize="36sp" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#757070"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnCarro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@android:dimen/thumbnail_width"
+                    android:layout_weight="0.1"
+                    android:contentDescription='"obtem o local atual como sendo do carro"'
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/carro" />
+
+                <ImageButton
+                    android:id="@+id/btnConsulta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@android:dimen/thumbnail_width"
+                    android:layout_weight="0.1"
+                    android:contentDescription='"consultar onde parei o carro"'
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/pergunta" />
+
+                <ImageButton
+                    android:id="@+id/btnMeuLocal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@android:dimen/thumbnail_width"
+                    android:layout_weight="0.1"
+                    android:contentDescription='"obtem o meu local"'
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/pin" />
+
+                <ImageButton
+                    android:id="@+id/btnCaminho"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@android:dimen/thumbnail_width"
+                    android:layout_weight="0.1"
+                    android:contentDescription='"desenha a rota"'
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/mapa" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#A19B9B"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtTituloLocal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#A19B9B"
+                    android:gravity="center"
+                    android:text="@string/titestac"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/txtCarro"
+                    android:layout_width="match_parent"
+                    android:layout_height="280px"
+                    android:background="#A19B9B"
+                    android:text="@string/localcarro"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#A19B9B"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtTituloMeuLocal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/meulocal"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/txtMeuLocal"
+                    android:layout_width="match_parent"
+                    android:layout_height="280px"
+                    android:text="@string/posicao"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>
